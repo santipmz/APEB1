@@ -1,4 +1,5 @@
 """Subasta educativa: control TCP y anuncios UDP multicast. Python 3.11+."""
+"""Versión Texto plano"""
 import argparse
 import json
 import socket
