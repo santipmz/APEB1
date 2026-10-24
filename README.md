@@ -2,6 +2,20 @@
 
 Primera etapa: implementación y prueba local. Requiere Python 3.11 o posterior, sin paquetes externos.
 
+## Interfaz de escritorio
+
+Ejecute `python subastas_visual.py` para abrir el panel. Requiere Tkinter, incluido normalmente en la instalación oficial de Python para Windows.
+
+1. Detenga los procesos de consola anteriores con `salir` para liberar el puerto 5000.
+2. Abra una ventana visual, elija **Subastador** y pulse **Iniciar / conectar**.
+3. Abra otras dos ventanas ejecutando el mismo comando. Elija **Cliente**, escriba nombres distintos y pulse **Iniciar / conectar**.
+4. En una prueba en el mismo equipo, conserve las IP predeterminadas. Para ZeroTier, introduzca la IP virtual propia y la del subastador.
+5. Use **Enviar puja**, **Consultar estado** y, en la ventana del subastador, **Cerrar subasta**.
+
+Cada ventana ejecuta el mismo programa de consola como proceso de fondo; mantiene el protocolo TCP y multicast. El historial muestra el origen de las actualizaciones. Los anuncios de la misma versión no se vuelven a mostrar continuamente.
+
+El botón **Desconectar** del subastador termina su proceso y cierra la subasta; para dar tiempo a los clientes a recibir el resultado, use primero **Cerrar subasta** y mantenga el panel conectado hasta comprobarlo.
+
 ## Prueba en Windows
 
 Abra tres terminales en esta carpeta. En la primera:

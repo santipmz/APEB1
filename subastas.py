@@ -122,6 +122,7 @@ def servidor(args):
                                 break
                             resultado = subasta.pujar(nombre, oferta, mensaje.get('monto'))
                             enviar(conn, resultado)
+                            mostrar(resultado)
                             if resultado['aceptada']:
                                 anunciar()
                         else:
